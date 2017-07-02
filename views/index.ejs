@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+   <h1></h1>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>Latitude</th>
+        <th>Longtuide</th>
+        <th>Phone</th>
+        <th>website</th>
+      </tr>
+      <% for(let i in person){%>
+      <tr>
+        <td><%= person[i].id %></td>
+        <td><%= person[i].name %></td>
+        <td><%= person[i].username %></td>
+        <td><%= person[i].email %></td>
+        <td><%= person[i].address.city %></td>
+        <td><%= person[i].address.zipcode %></td>
+        <td><%= person[i].address.geo.lat %></td>
+        <td><%= person[i].address.geo.lng %></td>
+        <td><%= person[i].phone %></td>
+        <td><%= person[i].website %></td>
+        </tr>
+      <% } %>
+      </table>
+  </body>
+</html>
